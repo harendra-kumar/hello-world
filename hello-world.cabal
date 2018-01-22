@@ -1,0 +1,78 @@
+name:               hello-world
+version:            0.1.0
+synopsis:           A minimal yet complete "hello world" package.
+description:
+  `hello-world` is a minimal yet complete model package. The package cabal file
+  is a model cabal file consisting of a library, an executable, a test suite,
+  and a benchmark.  Among other package metadata files the package also
+  contains @.travis.yml@, @appveyor.yml@ for a working Linux\/MacOS\/Windows
+  CI. It can be used as a starting point to develop a new package. Beginners
+  can use it to learn about haskell package metadata structure. To build and
+  verify the package run the following command in the package directory:
+  .
+  > $ ./packcheck.sh stack
+  If you prefer to use the cabal build tool:
+  > $ ./packcheck.sh cabal
+  .
+  See the README for more documentation.
+
+homepage:            https://github.com/harendra-kumar/hello-world
+bug-reports:         https://github.com/harendra-kumar/hello-world/issues
+license:             BSD3
+license-file:        LICENSE
+tested-with:         GHC==7.10.3, GHC==8.0.2, GHC==8.2.2
+author:              Harendra Kumar
+maintainer:          harendra.kumar@gmail.com
+copyright:           2017 Harendra Kumar
+category:            Testing, CI
+stability:           Experimental
+build-type:          Simple
+cabal-version:       >= 1.10
+
+extra-source-files:
+    Changelog.md
+    README.md
+    stack.yaml
+    .ci/stack-8.0.yaml
+
+source-repository head
+    type: git
+    location: https://github.com/harendra-kumar/hello-world
+
+library
+    hs-source-dirs:     lib
+    exposed-modules:    Hello.Internal
+                      , Hello.Tutorial
+                      , Hello
+    other-modules:      Hello.GoodBye
+    build-depends:      base >= 4.8 && < 5
+    default-language:   Haskell2010
+    default-extensions: OverloadedStrings
+                        RecordWildCards
+    ghc-options:        -Wall
+
+executable hello
+  hs-source-dirs: hello
+  main-is: Main.hs
+  build-depends:
+      hello-world
+    , base >= 4.8 && < 5
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  hs-source-dirs: test
+  main-is: Main.hs
+  build-depends:
+      hello-world
+    , base >= 4.8 && < 5
+  default-language: Haskell2010
+
+benchmark bench
+  type: exitcode-stdio-1.0
+  hs-source-dirs: bench
+  main-is: Main.hs
+  build-depends:
+      hello-world
+    , base >= 4.8   && < 5
+  default-language: Haskell2010

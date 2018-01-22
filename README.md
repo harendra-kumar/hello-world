@@ -2,7 +2,7 @@
 
 [![Hackage](https://img.shields.io/hackage/v/hello-world.svg?style=flat)](https://hackage.haskell.org/package/hello-world)
 [![Build Status](https://travis-ci.org/harendra-kumar/hello-world?branch=master)](https://travis-ci.org/harendra-kumar/hello-world)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/f7c0ncy84cxp8lbe?svg=true)](https://ci.appveyor.com/project/harendra-kumar/hello-world)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/9euv63lvv5xm6hpj?svg=true)](https://ci.appveyor.com/project/harendra-kumar/hello-world)
 [![Coverage Status](https://coveralls.io/repos/harendra-kumar/hello-world/badge.svg?branch=master&service=github)](https://coveralls.io/github/harendra-kumar/hello-world?branch=master)
 
 `hello-world` is a minimal yet complete model package. The `hello-world.cabal`
